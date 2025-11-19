@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giveaway</title>
+    <style>
+      .icon {
+        width: 90px;
+        border-radius: 45px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid rgb(225, 225, 225, 0.2);
+        border-bottom: 2px solid rgb(225, 225, 225, 0.2);
+      }
+      .icon {
+        margin-right: 10px;
+      }
+
+      body {
+        background: linear-gradient(20deg, blue, black 400px);
+        background-size: 100%;
+        background-position: center;
+        background-attachment: fixed;
+
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+      }
+      p {
+        color: red;
+        font-size: 1.3rem;
+        padding: 10px;
+      }
+      .p {
+        padding: 20px;
+        border: 2px solid;
+        border-image-source: linear-gradient(45deg, blue, red, violet);
+        border-image-slice: 1;
+        text-align: center;
+        animation: move both;
+        animation-timeline: view(20%);
+      }
+      nav ul li {
+        margin-right: auto;
+        padding: 20px 0px 20px 20px;
+
+      }
+      a {
+        font-size: 1.5rem;
+        color: aquamarine;
+        text-decoration: none;
+      }
+      .Mr {
+        width: 400px;
+        height: 400px;
+        margin: 0;
+      }
+      .beast {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 600;
+        position: relative;
+        transition: all 0.5s ease-in-out;
+      }
+      @media (max-width: 768px) {
+        .beast{
+            flex-direction: column;
+        }
+      }
+      a:hover {
+        color: #ffbd4a;
+      }
+      a:before,
+      a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        width: 0;
+        height: 4px;
+        background-color: #ffbd4a;
+        transition: width 0.3s ease;
+      }
+      a::before {
+        left: 0;
+      }
+      a::after {
+        right: 0;
+      }
+      a:hover::before,
+      a:hover::after {
+        width: 50%;
+        transition: width 0.5s ease;
+      }
+      .beast {
+        animation: fadein 4s ease-in-out;
+      }
+      @keyframes fadein {
+        from {
+       
+          margin-right: 100px;
+        }
+        to {
+         
+          margin-right: 0px;
+        }
+      }
+      @keyframes move {
+        from {
+          opacity: 0;
+          transition: 2s;
+          width: 270px;
+        }
+        40%,
+        80% {
+          transition: 100s;
+          width: 320px;
+          opacity: 1;
+        }
+        to {
+          width: 300px;
+          transition: 3s;
+          opacity: 0;
+        }
+      }
+      button{
+        width: 90px;
+        height: 40px;
+        border: none;
+        border-radius: 25px;
+        color: whitesmoke;
+       animation: change 3s infinite;
+       font-size: 1.1rem;
+        background-color: rgb(212, 22, 155);
+      }
+      button:active{
+        width: 80px;
+      }
+      @keyframes change {
+        40%{
+            color: blueviolet;
+            background-color: orange;
+        }
+        70%{
+            color: blueviolet;
+            background-color: rgb(27, 27, 94);
+        }
+      }
+      .love{
+        font-size: 3rem;
+      }
+      .h:hover{
+        cursor: pointer;}
+      .h:active{
+        color:blue;}
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="icon" src="laptop.jpg" alt="laptop" />
+      <nav>
+        <ul>
+          <li class="left"><p id="a" class="h">Home</p></li>
+          <li class="right"><p id="b" class="h">About us</p></li>
+          <li class="right"><p id="c" class="h">Register</p></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="beast">
+      <img class="Mr" src="Mr. Beast.jpg" alt="" />
+      <p class="p">
+        April fool ma nigga, A pril Fool. <br />
+        Derrick's Tech-up, Subscribe.
+        <br /><a href="https://www.bing.com/ck/a?!&&p=afd3faaedf516a27918fffe06f581b55d6bb959cc96a4f8793d7d9ba77be46b3JmltdHM9MTc2MzUxMDQwMA&ptn=3&ver=2&hsh=4&fclid=234ddc28-bce2-6435-1fa2-ca8fbd026540&psq=derrickstechup&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vY2hhbm5lbC9VQ0hfQnFSdWNtS1RmUGdVZWo5VVVWMEE"
+          >Derrick's Tech-up</a
+        >
+      </p>
+    </div>
+    <p>
+      Now about the give away, I and my crew are giving out free laptops since
+      we were able to earn 50million subs this 1st April. In order to get your
+      laptop click this button to register through a code we will send you.
+    </p>
+    
+    <button id="Submit">Submit</button><p class="love">💖</p>
+    <p>love ya</p>
+<script>document.getElementById('Submit').addEventListener('click', function(){
+    window.open('about.html', 'self')
+})
+window.addEventListener('load', function(){
+  alert('April fool')
+})
+document.getElementById('a').addEventListener('click', function(){
+    alert('April foooool')
+})
+document.getElementById('b').addEventListener('click', function(){
+    alert('April foooool')
+})
+document.getElementById('c').addEventListener('click', function(){
+    alert('April foooool')
+})</script>  
+</body>
+
+</html>
